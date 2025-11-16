@@ -1,0 +1,44 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--clr-dark-900);
+}
+
+.h-xl {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.h-l {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+}
+.h-m {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 19px;
+}
+.h-s {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+}
+
+.text-l {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 23px;
+}
+.text-m {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+}
+
+.btn-l {
+  font-size: 15px;
+}
+
+.btn-s {
+  font-size: 13px;
+}

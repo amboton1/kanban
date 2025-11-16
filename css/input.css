@@ -1,0 +1,22 @@
+.input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  background: var(--clr-white);
+  font-size: 13px;
+  color: var(--clr-dark-900);
+}
+
+.input:focus {
+  border: 1px solid var(--clr-primary-500);
+  outline: none;
+}
+
+.input.error {
+  border: 1px solid var(--clr-red-500);
+}
+
+.input.error + .input-error-text {
+  font-size: 12px;
+  color: var(--clr-red-500);
+}

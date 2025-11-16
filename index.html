@@ -1,14 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Kanban task management web app</title>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
 
-</body>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Kanban task management web app</title>
+  </head>
+  <body>
+    <h1 class="h-xl">Kanban Design System Test</h1>
+
+    <p class="text-l">This is body text in Large size.</p>
+    <p class="text-m">This is body text in Medium size.</p>
+
+    <br />
+
+    <button class="btn-primary btn-l">Primary Button (L)</button>
+    <button class="btn-primary btn-s">Primary Button (S)</button>
+
+    <button class="btn-secondary btn-l">Secondary Button (L)</button>
+    <button class="btn-destructive btn-l">Destructive Button</button>
+
+    <br /><br />
+
+    <input class="input" placeholder="Enter task name" />
+
+    <br /><br />
+
+    <div class="checkbox-wrapper">
+      <div class="checkbox"></div>
+      <span class="text-m">Subtask Example</span>
+    </div>
+
+    <h2 class="h-l">Dropdown Test</h2>
+
+    <div class="dropdown" id="dropdown-test-1">
+      <div class="dropdown-select">
+        Doing
+        <img
+          class="dropdown-icon"
+          src="./assets/icon-chevron-down.svg"
+          alt=""
+        />
+      </div>
+
+      <div class="dropdown-list">
+        <div class="dropdown-item">Todo</div>
+        <div class="dropdown-item">Doing</div>
+        <div class="dropdown-item">Done</div>
+      </div>
+    </div>
+
+    <div class="dropdown" id="dropdown-test-2" style="margin-top: 24px">
+      <div class="dropdown-select">
+        Select Priority
+        <img
+          class="dropdown-icon"
+          src="./assets/icon-chevron-down.svg"
+          alt=""
+        />
+      </div>
+
+      <div class="dropdown-list">
+        <div class="dropdown-item">Low</div>
+        <div class="dropdown-item">Medium</div>
+        <div class="dropdown-item">High</div>
+        <div class="dropdown-item">Critical</div>
+      </div>
+    </div>
+  </body>
 </html>
