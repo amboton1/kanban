@@ -1,6 +1,17 @@
-document.getElementById("theme-toggle").addEventListener("change", function () {
+const toggle = document.getElementById("theme-toggle");
+
+toggle?.addEventListener("change", () => {
   document.body.classList.toggle("dark-theme");
+  localStorage.setItem(
+    "theme",
+    document.body.classList.contains("dark-theme") ? "dark" : "light"
+  );
 });
+
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-theme");
+  toggle.checked = true;
+}
 
 document.querySelectorAll(".sidebar__board-item").forEach((item) => {
   item.addEventListener("click", () => {

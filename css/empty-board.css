@@ -1,0 +1,15 @@
+.board {
+  flex: 1;
+  display: flex;
+}
+
+.empty-board {
+  margin: auto;
+  text-align: center;
+  max-width: 493px;
+}
+
+.empty-board__text {
+  color: var(--clr-grey-300);
+  margin-bottom: 32px;
+}

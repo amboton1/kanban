@@ -4,7 +4,12 @@
 @import url("./input.css");
 @import url("./dropdown.css");
 @import url("./checkbox.css");
+@import url("./header.css");
+@import url("./empty-board.css");
+@import url("./layout.css");
 
 body {
   height: 100vh;
+  background: var(--clr-bg-main);
+  color: var(--clr-text-primary);
 }
