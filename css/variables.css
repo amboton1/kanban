@@ -10,10 +10,23 @@
   --clr-grey-300: #828fa3;
   --clr-grey-200: #e4ebfa;
   --clr-grey-100: #f4f7fd;
-  --clr-white: #ffffff;
+  --clr-bg-secondary: #ffffff;
 
   --clr-red-500: #ea5555;
   --clr-red-300: #ff9898;
 
   --shadow-base: 0px 4px 6px rgba(54, 78, 126, 0.1);
+}
+
+body.dark-theme {
+  --clr-bg-main: #20212c;
+  --clr-bg-secondary: #2b2c37;
+
+  --clr-grey-100: #20212c;
+  --clr-grey-200: #3e3f4e;
+  --clr-grey-300: #828fa3;
+
+  --clr-lines-light: #3e3f4e;
+
+  --clr-text-primary: #ffffff;
 }

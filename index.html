@@ -24,52 +24,78 @@
     <title>Frontend Mentor | Kanban task management web app</title>
   </head>
   <body>
-    <aside class="sidebar">
-      <div class="sidebar__top">
-        <div class="sidebar__logo">
-          <img src="assets/logo.svg" alt="Kanban Logo" />
+    <div class="app">
+      <aside class="sidebar">
+        <div class="sidebar__top">
+          <div class="sidebar__logo">
+            <img src="assets/logo.svg" alt="Kanban Logo" />
+          </div>
+
+          <div class="sidebar__boards-title h-s">ALL BOARDS (3)</div>
+
+          <ul class="sidebar__boards">
+            <li class="sidebar__board-item h-m active">
+              <img src="assets/icon-board.svg" alt="" />
+              <span>Platform Launch</span>
+            </li>
+
+            <li class="sidebar__board-item h-m">
+              <img src="assets/icon-board.svg" alt="" />
+              <span>Marketing Plan</span>
+            </li>
+
+            <li class="sidebar__board-item h-m">
+              <img src="assets/icon-board.svg" alt="" />
+              <span>Roadmap</span>
+            </li>
+
+            <li class="sidebar__board-item create">
+              <img src="assets/icon-board.svg" alt="" />
+              <span class="h-m">+ Create New Board</span>
+            </li>
+          </ul>
         </div>
 
-        <div class="sidebar__boards-title h-s">ALL BOARDS (3)</div>
+        <div class="sidebar__bottom">
+          <div class="sidebar__theme">
+            <img src="assets/icon-light-theme.svg" alt="" />
+            <label class="switch">
+              <input type="checkbox" id="theme-toggle" />
+              <span class="slider"></span>
+            </label>
+            <img src="assets/icon-dark-theme.svg" alt="" />
+          </div>
 
-        <ul class="sidebar__boards">
-          <li class="sidebar__board-item h-m active">
-            <img src="assets/icon-board.svg" alt="" />
-            <span>Platform Launch</span>
-          </li>
-
-          <li class="sidebar__board-item h-m">
-            <img src="assets/icon-board.svg" alt="" />
-            <span>Marketing Plan</span>
-          </li>
-
-          <li class="sidebar__board-item h-m">
-            <img src="assets/icon-board.svg" alt="" />
-            <span>Roadmap</span>
-          </li>
-
-          <li class="sidebar__board-item create">
-            <img src="assets/icon-board.svg" alt="" />
-            <span class="h-m">+ Create New Board</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="sidebar__bottom">
-        <div class="sidebar__theme">
-          <img src="assets/icon-light-theme.svg" alt="" />
-          <label class="switch">
-            <input type="checkbox" id="theme-toggle" />
-            <span class="slider"></span>
-          </label>
-          <img src="assets/icon-dark-theme.svg" alt="" />
+          <button class="sidebar__hide-btn h-m">
+            <img src="assets/icon-hide-sidebar.svg" alt="" />
+            Hide Sidebar
+          </button>
         </div>
+      </aside>
 
-        <button class="sidebar__hide-btn h-m">
-          <img src="assets/icon-hide-sidebar.svg" alt="" />
-          Hide Sidebar
-        </button>
+      <div class="main">
+        <header class="header">
+          <h1 class="h-xl">Platform Launch</h1>
+
+          <div class="header__actions">
+            <button class="btn-primary btn-l">+ Add New Task</button>
+            <button class="header__menu">
+              <img src="assets/icon-vertical-ellipsis.svg" alt="Menu" />
+            </button>
+          </div>
+        </header>
+
+        <main class="board">
+          <div class="empty-board">
+            <p class="empty-board__text h-l">
+              This board is empty. Create a new column to get started.
+            </p>
+
+            <button class="btn-primary btn-l">+ Add New Column</button>
+          </div>
+        </main>
       </div>
-    </aside>
+    </div>
+    <script src="./components/Sidebar/Sidebar.js"></script>
   </body>
 </html>
