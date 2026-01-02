@@ -12,6 +12,7 @@
     />
 
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sidebar.css" />
 
     <link
       rel="icon"
@@ -23,65 +24,52 @@
     <title>Frontend Mentor | Kanban task management web app</title>
   </head>
   <body>
-    <h1 class="h-xl">Kanban Design System Test</h1>
+    <aside class="sidebar">
+      <div class="sidebar__top">
+        <div class="sidebar__logo">
+          <img src="assets/logo.svg" alt="Kanban Logo" />
+        </div>
 
-    <p class="text-l">This is body text in Large size.</p>
-    <p class="text-m">This is body text in Medium size.</p>
+        <div class="sidebar__boards-title h-s">ALL BOARDS (3)</div>
 
-    <br />
+        <ul class="sidebar__boards">
+          <li class="sidebar__board-item h-m active">
+            <img src="assets/icon-board.svg" alt="" />
+            <span>Platform Launch</span>
+          </li>
 
-    <button class="btn-primary btn-l">Primary Button (L)</button>
-    <button class="btn-primary btn-s">Primary Button (S)</button>
+          <li class="sidebar__board-item h-m">
+            <img src="assets/icon-board.svg" alt="" />
+            <span>Marketing Plan</span>
+          </li>
 
-    <button class="btn-secondary btn-l">Secondary Button (L)</button>
-    <button class="btn-destructive btn-l">Destructive Button</button>
+          <li class="sidebar__board-item h-m">
+            <img src="assets/icon-board.svg" alt="" />
+            <span>Roadmap</span>
+          </li>
 
-    <br /><br />
-
-    <input class="input" placeholder="Enter task name" />
-
-    <br /><br />
-
-    <div class="checkbox-wrapper">
-      <div class="checkbox"></div>
-      <span class="text-m">Subtask Example</span>
-    </div>
-
-    <h2 class="h-l">Dropdown Test</h2>
-
-    <div class="dropdown" id="dropdown-test-1">
-      <div class="dropdown-select">
-        Doing
-        <img
-          class="dropdown-icon"
-          src="./assets/icon-chevron-down.svg"
-          alt=""
-        />
+          <li class="sidebar__board-item create">
+            <img src="assets/icon-board.svg" alt="" />
+            <span class="h-m">+ Create New Board</span>
+          </li>
+        </ul>
       </div>
 
-      <div class="dropdown-list">
-        <div class="dropdown-item">Todo</div>
-        <div class="dropdown-item">Doing</div>
-        <div class="dropdown-item">Done</div>
-      </div>
-    </div>
+      <div class="sidebar__bottom">
+        <div class="sidebar__theme">
+          <img src="assets/icon-light-theme.svg" alt="" />
+          <label class="switch">
+            <input type="checkbox" id="theme-toggle" />
+            <span class="slider"></span>
+          </label>
+          <img src="assets/icon-dark-theme.svg" alt="" />
+        </div>
 
-    <div class="dropdown" id="dropdown-test-2" style="margin-top: 24px">
-      <div class="dropdown-select">
-        Select Priority
-        <img
-          class="dropdown-icon"
-          src="./assets/icon-chevron-down.svg"
-          alt=""
-        />
+        <button class="sidebar__hide-btn h-m">
+          <img src="assets/icon-hide-sidebar.svg" alt="" />
+          Hide Sidebar
+        </button>
       </div>
-
-      <div class="dropdown-list">
-        <div class="dropdown-item">Low</div>
-        <div class="dropdown-item">Medium</div>
-        <div class="dropdown-item">High</div>
-        <div class="dropdown-item">Critical</div>
-      </div>
-    </div>
+    </aside>
   </body>
 </html>
