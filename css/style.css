@@ -4,3 +4,7 @@
 @import url("./input.css");
 @import url("./dropdown.css");
 @import url("./checkbox.css");
+
+body {
+  height: 100vh;
+}
