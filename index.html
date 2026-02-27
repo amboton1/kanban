@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https:
+    <link rel="preconnect" href="https:
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+      href="https:
       rel="stylesheet"
     />
 
@@ -94,8 +94,98 @@
             <button class="btn-primary btn-l">+ Add New Column</button>
           </div>
         </main>
+
+        
+        <div id="add-task-modal" class="modal" aria-hidden="true">
+          <div class="modal__backdrop" aria-hidden="true"></div>
+          <div
+            class="modal__content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="add-task-title"
+          >
+            <div class="modal__header">
+              <h2 id="add-task-title" class="h-l">Add New Task</h2>
+              <button class="modal__close" aria-label="Close modal">
+                <img src="assets/icon-cross.svg" alt="Close" />
+              </button>
+            </div>
+
+            <form id="add-task-form" class="modal__form">
+              <div class="form-group">
+                <label for="task-title" class="text-m">Title</label>
+                <input
+                  type="text"
+                  id="task-title"
+                  name="title"
+                  class="input"
+                  placeholder="e.g. Take coffee break"
+                  required
+                />
+                <span
+                  class="input-error-text"
+                  id="title-error"
+                  style="display: none"
+                ></span>
+              </div>
+
+              <div class="form-group">
+                <label for="task-description" class="text-m">Description</label>
+                <textarea
+                  id="task-description"
+                  name="description"
+                  class="input"
+                  placeholder="Description of the task..."
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="text-m">Subtasks</label>
+                <div id="subtasks-container" class="subtasks-container">
+                  
+                </div>
+                <button
+                  type="button"
+                  id="add-subtask-btn"
+                  class="btn-secondary btn-s"
+                >
+                  + Add New Subtask
+                </button>
+              </div>
+
+              <div class="form-group">
+                <label for="task-status" class="text-m">Status</label>
+                <div class="dropdown" id="status-dropdown">
+                  <div
+                    class="dropdown-select"
+                    id="status-select"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <span id="status-display">Select Status</span>
+                    <img src="assets/icon-chevron-down.svg" alt="Dropdown" />
+                  </div>
+                  <ul
+                    class="dropdown-list"
+                    id="status-list"
+                    role="listbox"
+                    aria-label="Status options"
+                  >
+                    
+                  </ul>
+                </div>
+              </div>
+
+              <button type="submit" class="btn-primary btn-l modal__submit">
+                Create Task
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
     <script src="./components/Sidebar/Sidebar.js"></script>
+    <script src="./components/Modal/AddTaskModal.js"></script>
   </body>
 </html>
