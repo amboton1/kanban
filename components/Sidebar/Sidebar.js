@@ -1,8 +1,6 @@
 import { fetchData } from "../../utils/fetchData.js";
 
 const themeToggle = document.getElementById("theme-toggle");
-const hideSidebarBtn = document.querySelector(".sidebar__hide-btn");
-const showSidebarBtn = document.querySelector(".sidebar__show-btn");
 const handleSidebarBtns = document.querySelectorAll(".handle-sidebar-btn");
 
 themeToggle?.addEventListener("change", () => {
