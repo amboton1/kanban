@@ -1,10 +1,11 @@
-import { fetchData } from "../BoardState.js";
+import { fetchData } from "../../utils/fetchData.js";
 
-const toggle = document.getElementById("theme-toggle");
+const themeToggle = document.getElementById("theme-toggle");
 const hideSidebarBtn = document.querySelector(".sidebar__hide-btn");
 const showSidebarBtn = document.querySelector(".sidebar__show-btn");
+const handleSidebarBtns = document.querySelectorAll(".handle-sidebar-btn");
 
-toggle?.addEventListener("change", () => {
+themeToggle?.addEventListener("change", () => {
     document.body.classList.toggle("dark-theme");
     localStorage.setItem(
         "theme",
@@ -14,7 +15,9 @@ toggle?.addEventListener("change", () => {
 
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-theme");
-    toggle.checked = true;
+    if (themeToggle) {
+        themeToggle.checked = true;
+    }
 }
 
 document.querySelectorAll(".sidebar__board-item").forEach((item) => {
@@ -31,22 +34,26 @@ document.querySelectorAll(".sidebar__board-item").forEach((item) => {
     });
 });
 
-hideSidebarBtn.addEventListener("click", () => {
-    document.querySelector(".sidebar").classList.add("hide-sidebar");
-    setTimeout(() => {
-        document.querySelector(".sidebar").classList.remove("show-sidebar");
-        document
-            .querySelector(".board__board-wrapper")
-            .classList.add("move-board-wrapper");
-    }, 100);
-});
-
-showSidebarBtn.addEventListener("click", () => {
-    document.querySelector(".sidebar").classList.add("show-sidebar");
-    setTimeout(() => {
-        document.querySelector(".sidebar").classList.remove("hide-sidebar");
-        document
-            .querySelector(".board__board-wrapper")
-            .classList.remove("move-board-wrapper");
+Array.from(handleSidebarBtns).forEach((btn) => {
+    btn.addEventListener("click", () => {
+        if (btn.className.includes("sidebar__hide-btn")) {
+            toggleSidebarAction("hide-sidebar", "show-sidebar");
+        } else if (btn.className.includes("sidebar__show-btn")) {
+            toggleSidebarAction("show-sidebar", "hide-sidebar");
+        }
     });
 });
+
+function toggleSidebarAction(classToAdd, classToRemove) {
+    document.querySelector(".sidebar").classList.add(classToAdd);
+    setTimeout(() => {
+        document.querySelector(".sidebar").classList.remove(classToRemove);
+        classToAdd === "hide-sidebar"
+            ? document
+                  .querySelector(".board__board-wrapper")
+                  .classList.add("move-board-wrapper")
+            : document
+                  .querySelector(".board__board-wrapper")
+                  .classList.remove("move-board-wrapper");
+    }, 0);
+}

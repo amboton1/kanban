@@ -1,14 +1,8 @@
+import { fetchData } from "../utils/fetchData.js";
+
 const board = document.querySelector(".board");
 
-export async function fetchData(item) {
-    const response = await fetch("../data.json");
-    const data = await response.json();
-    const { boards } = data;
-    const selectedBoard = boards.filter((board) => board.name === item);
-    populateData(selectedBoard[0].columns);
-}
-
-function populateData(boardColumns) {
+export function populateData(boardColumns) {
     board.innerHTML = "";
     const boardWrapper = document.createElement("div");
     boardWrapper.classList.add("board__board-wrapper");
