@@ -4,12 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https:
-    <link rel="preconnect" href="https:
-    <link
-      href="https:
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/sidebar.css" />
@@ -95,7 +91,6 @@
           </div>
         </main>
 
-        
         <div id="add-task-modal" class="modal" aria-hidden="true">
           <div class="modal__backdrop" aria-hidden="true"></div>
           <div
@@ -112,7 +107,7 @@
             </div>
 
             <form id="add-task-form" class="modal__form">
-              <div class="form-group">
+              <div class="form-group mr-2">
                 <label for="task-title" class="text-m">Title</label>
                 <input
                   type="text"
@@ -129,7 +124,7 @@
                 ></span>
               </div>
 
-              <div class="form-group">
+              <div class="form-group mr-2">
                 <label for="task-description" class="text-m">Description</label>
                 <textarea
                   id="task-description"
@@ -142,9 +137,7 @@
 
               <div class="form-group">
                 <label class="text-m">Subtasks</label>
-                <div id="subtasks-container" class="subtasks-container">
-                  
-                </div>
+                <div id="subtasks-container" class="subtasks-container"></div>
                 <button
                   type="button"
                   id="add-subtask-btn"
@@ -171,9 +164,7 @@
                     id="status-list"
                     role="listbox"
                     aria-label="Status options"
-                  >
-                    
-                  </ul>
+                  ></ul>
                 </div>
               </div>
 

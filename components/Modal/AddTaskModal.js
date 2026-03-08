@@ -66,7 +66,6 @@ class AddTaskModal {
 
   async populateStatusOptions() {
     const data = await this.loadBoardData();
-    console.log(data);
 
     if (!data || !data.boards || data.boards.length === 0) return;
 
@@ -285,8 +284,6 @@ class AddTaskModal {
           await this.saveData(data);
 
           this.close();
-
-          console.log("Task created successfully:", newTask);
         }
       }
     } catch (error) {
@@ -301,7 +298,6 @@ class AddTaskModal {
   async saveData(data) {
     try {
       localStorage.setItem("kanbanData", JSON.stringify(data));
-      console.log("Data saved to localStorage:", data);
     } catch (error) {
       console.error("Error saving data to localStorage:", error);
     }
