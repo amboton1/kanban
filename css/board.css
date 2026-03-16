@@ -28,7 +28,7 @@
 }
 
 .board-column__column-task {
-    background-color: var(--clr-bg-secondary);
+    background-color: var(--clr-white);
     box-shadow: 0 4px 6px rgba(54, 78, 126, 0.1);
     border-radius: 8px;
     padding: 12px;
@@ -38,6 +38,7 @@
     font-size: 15px;
     color: var(--clr-dark-900);
     font-weight: 700;
+    margin-block: 8px;
 }
 
 .board-column__column-task p {

@@ -1,193 +1,225 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/sidebar.css" />
-    <link rel="stylesheet" href="./css/board.css" />
-    <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/sidebar.css" />
+        <link rel="stylesheet" href="./css/board.css" />
+        <link rel="stylesheet" href="./css/reset.css" />
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png"
-    />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon-32x32.png"
+        />
 
-    <title>Frontend Mentor | Kanban task management web app</title>
-  </head>
-  <body>
-    <div class="app">
-      <aside class="sidebar">
-        <div class="sidebar__top">
-          <div class="sidebar__logo">
-            <img src="assets/logo.svg" alt="Kanban Logo" />
-          </div>
+        <title>Frontend Mentor | Kanban task management web app</title>
+    </head>
+    <body>
+        <div class="app">
+            <aside class="sidebar">
+                <div class="sidebar__top">
+                    <div class="sidebar__logo">
+                        <img src="assets/logo.svg" alt="Kanban Logo" />
+                    </div>
 
-          <div class="sidebar__boards-title h-s">ALL BOARDS (3)</div>
+                    <div class="sidebar__boards-title h-s">ALL BOARDS (3)</div>
 
-          <ul class="sidebar__boards">
-            <li class="sidebar__board-item h-m active">
-              <img src="assets/icon-board.svg" alt="" />
-              <span>Platform Launch</span>
-            </li>
+                    <ul class="sidebar__boards">
+                        <li class="sidebar__board-item h-m active">
+                            <img src="assets/icon-board.svg" alt="" />
+                            <span>Platform Launch</span>
+                        </li>
 
-            <li class="sidebar__board-item h-m">
-              <img src="assets/icon-board.svg" alt="" />
-              <span>Marketing Plan</span>
-            </li>
+                        <li class="sidebar__board-item h-m">
+                            <img src="assets/icon-board.svg" alt="" />
+                            <span>Marketing Plan</span>
+                        </li>
 
-            <li class="sidebar__board-item h-m">
-              <img src="assets/icon-board.svg" alt="" />
-              <span>Roadmap</span>
-            </li>
+                        <li class="sidebar__board-item h-m">
+                            <img src="assets/icon-board.svg" alt="" />
+                            <span>Roadmap</span>
+                        </li>
 
-            <li class="sidebar__board-item create">
-              <img src="assets/icon-board.svg" alt="" />
-              <span class="h-m">+ Create New Board</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="sidebar__bottom">
-          <div class="sidebar__theme">
-            <img src="assets/icon-light-theme.svg" alt="" />
-            <label class="switch">
-              <input type="checkbox" id="theme-toggle" />
-              <span class="slider"></span>
-            </label>
-            <img src="assets/icon-dark-theme.svg" alt="" />
-          </div>
-
-          <button class="sidebar__hide-btn handle-sidebar-btn h-m">
-            <img src="assets/icon-hide-sidebar.svg" alt="" />
-            Hide Sidebar
-          </button>
-        </div>
-      </aside>
-
-      <div class="main">
-        <header class="header">
-          <div class="header__logo"></div>
-          <h1 class="header__board-title h-xl">Platform Launch</h1>
-
-          <div class="header__actions">
-            <button class="btn-primary btn-l">+ Add New Task</button>
-            <button class="header__menu">
-              <img src="assets/icon-vertical-ellipsis.svg" alt="Menu" />
-            </button>
-          </div>
-        </header>
-
-        <main class="board">
-          <div class="empty-board">
-            <p class="empty-board__text h-l">
-              This board is empty. Create a new column to get started.
-            </p>
-
-            <button class="btn-primary btn-l">+ Add New Column</button>
-          </div>
-        </main>
-
-        <div id="add-task-modal" class="modal" aria-hidden="true">
-          <div class="modal__backdrop" aria-hidden="true"></div>
-          <div
-            class="modal__content"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="add-task-title"
-          >
-            <div class="modal__header">
-              <h2 id="add-task-title" class="h-l">Add New Task</h2>
-              <button class="modal__close" aria-label="Close modal">
-                <img src="assets/icon-cross.svg" alt="Close" />
-              </button>
-            </div>
-
-            <form id="add-task-form" class="modal__form">
-              <div class="form-group">
-                <label for="task-title" class="text-m">Title</label>
-                <input
-                  type="text"
-                  id="task-title"
-                  name="title"
-                  class="input"
-                  placeholder="e.g. Take coffee break"
-                  required
-                />
-                <span
-                  class="input-error-text"
-                  id="title-error"
-                  style="display: none"
-                ></span>
-              </div>
-
-              <div class="form-group">
-                <label for="task-description" class="text-m">Description</label>
-                <textarea
-                  id="task-description"
-                  name="description"
-                  class="input"
-                  placeholder="Description of the task..."
-                  rows="4"
-                ></textarea>
-              </div>
-
-              <div class="form-group">
-                <label class="text-m">Subtasks</label>
-                <div id="subtasks-container" class="subtasks-container"></div>
-                <button
-                  type="button"
-                  id="add-subtask-btn"
-                  class="btn-secondary btn-s"
-                >
-                  + Add New Subtask
-                </button>
-              </div>
-
-              <div class="form-group">
-                <label for="task-status" class="text-m">Status</label>
-                <div class="dropdown" id="status-dropdown">
-                  <div
-                    class="dropdown-select"
-                    id="status-select"
-                    aria-haspopup="listbox"
-                    aria-expanded="false"
-                  >
-                    <span id="status-display">Select Status</span>
-                    <img src="assets/icon-chevron-down.svg" alt="Dropdown" />
-                  </div>
-                  <ul
-                    class="dropdown-list"
-                    id="status-list"
-                    role="listbox"
-                    aria-label="Status options"
-                  ></ul>
+                        <li class="sidebar__board-item create">
+                            <img src="assets/icon-board.svg" alt="" />
+                            <span class="h-m">+ Create New Board</span>
+                        </li>
+                    </ul>
                 </div>
-              </div>
 
-              <button type="submit" class="btn-primary btn-l modal__submit">
-                Create Task
-              </button>
-            </form>
-          </div>
+                <div class="sidebar__bottom">
+                    <div class="sidebar__theme">
+                        <img src="assets/icon-light-theme.svg" alt="" />
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle" />
+                            <span class="slider"></span>
+                        </label>
+                        <img src="assets/icon-dark-theme.svg" alt="" />
+                    </div>
+
+                    <button class="sidebar__hide-btn handle-sidebar-btn h-m">
+                        <img src="assets/icon-hide-sidebar.svg" alt="" />
+                        Hide Sidebar
+                    </button>
+                </div>
+            </aside>
+
+            <div class="main">
+                <header class="header">
+                    <div class="header__logo">
+                        <img src="assets/logo.svg" alt="Kanban Logo" />
+                    </div>
+                    <h1 class="header__board-title h-xl">Platform Launch</h1>
+
+                    <div class="header__actions">
+                        <button class="btn-primary btn-l">
+                            + Add New Task
+                        </button>
+                        <button class="header__menu">
+                            <img
+                                src="assets/icon-vertical-ellipsis.svg"
+                                alt="Menu"
+                            />
+                        </button>
+                    </div>
+                </header>
+
+                <main class="board">
+                    <div class="empty-board">
+                        <p class="empty-board__text h-l">
+                            This board is empty. Create a new column to get
+                            started.
+                        </p>
+
+                        <button class="btn-primary btn-l">
+                            + Add New Column
+                        </button>
+                    </div>
+                </main>
+
+                <div id="add-task-modal" class="modal" aria-hidden="true">
+                    <div class="modal__backdrop" aria-hidden="true"></div>
+                    <div
+                        class="modal__content"
+                        role="dialog"
+                        aria-modal="true"
+                        aria-labelledby="add-task-title"
+                    >
+                        <div class="modal__header">
+                            <h2 id="add-task-title" class="h-l">
+                                Add New Task
+                            </h2>
+                            <button
+                                class="modal__close"
+                                aria-label="Close modal"
+                            >
+                                <img src="assets/icon-cross.svg" alt="Close" />
+                            </button>
+                        </div>
+
+                        <form id="add-task-form" class="modal__form">
+                            <div class="form-group">
+                                <label for="task-title" class="text-m"
+                                    >Title</label
+                                >
+                                <input
+                                    type="text"
+                                    id="task-title"
+                                    name="title"
+                                    class="input"
+                                    placeholder="e.g. Take coffee break"
+                                    required
+                                />
+                                <span
+                                    class="input-error-text"
+                                    id="title-error"
+                                    style="display: none"
+                                ></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="task-description" class="text-m"
+                                    >Description</label
+                                >
+                                <textarea
+                                    id="task-description"
+                                    name="description"
+                                    class="input"
+                                    placeholder="Description of the task..."
+                                    rows="4"
+                                ></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="text-m">Subtasks</label>
+                                <div
+                                    id="subtasks-container"
+                                    class="subtasks-container"
+                                ></div>
+                                <button
+                                    type="button"
+                                    id="add-subtask-btn"
+                                    class="btn-secondary btn-s"
+                                >
+                                    + Add New Subtask
+                                </button>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="task-status" class="text-m"
+                                    >Status</label
+                                >
+                                <div class="dropdown" id="status-dropdown">
+                                    <div
+                                        class="dropdown-select"
+                                        id="status-select"
+                                        aria-haspopup="listbox"
+                                        aria-expanded="false"
+                                    >
+                                        <span id="status-display"
+                                            >Select Status</span
+                                        >
+                                        <img
+                                            src="assets/icon-chevron-down.svg"
+                                            alt="Dropdown"
+                                        />
+                                    </div>
+                                    <ul
+                                        class="dropdown-list"
+                                        id="status-list"
+                                        role="listbox"
+                                        aria-label="Status options"
+                                    ></ul>
+                                </div>
+                            </div>
+
+                            <button
+                                type="submit"
+                                class="btn-primary btn-l modal__submit"
+                            >
+                                Create Task
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <button class="sidebar__show-btn handle-sidebar-btn">
+                <img src="./assets/icon-show-sidebar.svg" alt="" />
+            </button>
         </div>
-      </div>
-      <button class="sidebar__show-btn handle-sidebar-btn">
-        <img src="./assets/icon-show-sidebar.svg" alt="" />
-      </button>
-    </div>
-    <script type="module" src="./components/Sidebar/Sidebar.js"></script>
-    <script type="module" src="./components/BoardState.js"></script>
-    <script type="module" src="./components/Modal/AddTaskModal.js"></script>
-  </body>
+        <script type="module" src="./components/Sidebar/Sidebar.js"></script>
+        <script type="module" src="./components/BoardState.js"></script>
+        <script type="module" src="./components/Modal/AddTaskModal.js"></script>
+    </body>
 </html>
