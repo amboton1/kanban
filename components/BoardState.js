@@ -22,7 +22,7 @@ export function populateData(boardColumns) {
                 (task) => task.isCompleted === true,
             ).length;
             amountOfSubtasksCompleted.innerText =
-                amount + " of " + task.subtasks.length;
+                amount + " of " + task.subtasks.length + " subtasks";
             columnTask.append(taskTitle, amountOfSubtasksCompleted);
             boardColumn.append(columnTask);
         });
