@@ -283,6 +283,9 @@ class AddTaskModal {
 
           await this.saveData(data);
 
+          const updatedColumns = data.boards[this.currentBoardIndex].columns;
+          document.dispatchEvent(new CustomEvent("taskAdded", { detail: { columns: updatedColumns } }));
+
           this.close();
         }
       }

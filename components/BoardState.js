@@ -36,3 +36,7 @@ export function populateData(boardColumns) {
 }
 
 fetchData(document.querySelector("span").innerText);
+
+document.addEventListener("taskAdded", (e) => {
+    populateData(e.detail.columns);
+});
