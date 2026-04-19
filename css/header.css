@@ -1,17 +1,18 @@
 .header {
     height: 96px;
     padding: 0 32px;
-    background: white;
+    background: var(--clr-white);
     border-bottom: 1px solid var(--clr-grey-200);
     display: flex;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
     .header {
-        position: fixed;
-        left: 0;
-        right: 0;
         height: 64px;
         z-index: 4;
     }

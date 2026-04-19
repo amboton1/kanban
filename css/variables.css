@@ -1,32 +1,33 @@
 :root {
-  --clr-white: #ffffff;
-  --clr-primary-500: #635fc7;
-  --clr-primary-300: #a8a4ff;
+    --clr-white: #ffffff;
+    --clr-primary-500: #635fc7;
+    --clr-primary-300: #a8a4ff;
 
-  --clr-dark-900: #000112;
-  --clr-dark-800: #20212c;
-  --clr-dark-700: #2b2c37;
-  --clr-dark-600: #3e3f4e;
+    --clr-dark-900: #000112;
+    --clr-dark-800: #20212c;
+    --clr-dark-700: #2b2c37;
+    --clr-dark-600: #3e3f4e;
 
-  --clr-grey-300: #828fa3;
-  --clr-grey-200: #e4ebfa;
-  --clr-grey-100: #f4f7fd;
+    --clr-grey-300: #828fa3;
+    --clr-grey-200: #e4ebfa;
+    --clr-grey-100: #f4f7fd;
 
-  --clr-red-500: #ea5555;
-  --clr-red-300: #ff9898;
+    --clr-red-500: #ea5555;
+    --clr-red-300: #ff9898;
+    --clr-modal: rgba(21, 22, 30, 0.5);
 
-  --shadow-base: 0px 4px 6px rgba(54, 78, 126, 0.1);
+    --shadow-base: 0px 4px 6px rgba(54, 78, 126, 0.1);
 }
 
 body.dark-theme {
-  --clr-bg-main: #20212c;
-  --clr-bg-secondary: #2b2c37;
+    --clr-bg-main: #20212c;
+    --clr-bg-secondary: #2b2c37;
 
-  --clr-grey-100: #20212c;
-  --clr-grey-200: #3e3f4e;
-  --clr-grey-300: #828fa3;
+    --clr-grey-100: #20212c;
+    --clr-grey-200: #3e3f4e;
+    --clr-grey-300: #828fa3;
 
-  --clr-lines-light: #3e3f4e;
+    --clr-lines-light: #3e3f4e;
 
-  --clr-text-primary: #ffffff;
+    --clr-text-primary: #ffffff;
 }

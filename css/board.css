@@ -3,9 +3,14 @@
     grid-template-columns: repeat(4, 280px);
     column-gap: 24px;
     padding: 24px;
+    background-color: var(--clr-grey-100);
     position: relative;
     left: 300px;
     transition: left 0.5s ease-in-out;
+}
+
+.board__board-wrapper {
+    margin-block-start: 96px;
 }
 
 @media (max-width: 768px) {
@@ -13,8 +18,7 @@
         left: 0;
     }
 
-    .board__board-wrapper,
-    .new-column-button {
+    .board__board-wrapper {
         margin-block-start: 64px;
     }
 }
