@@ -16,9 +16,6 @@
 @media (max-width: 768px) {
     .board__board-wrapper {
         left: 0;
-    }
-
-    .board__board-wrapper {
         margin-block-start: 64px;
     }
 }

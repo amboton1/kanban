@@ -13,7 +13,8 @@ export function populateData(boardColumns) {
         const h2 = document.createElement("h2");
         const colorSpan = document.createElement("span");
         colorSpan.classList.add("span-color");
-        colorSpan.style.backgroundColor = colorsArray[index];
+        colorSpan.style.backgroundColor =
+            colorsArray[index % colorsArray.length];
         h2.innerText = column.name + " (" + column.tasks.length + ")";
         h2.prepend(colorSpan);
         boardColumn.append(h2);

@@ -4,7 +4,7 @@ const themeToggle = document.getElementById("theme-toggle");
 const handleSidebarBtns = document.querySelectorAll(".handle-sidebar-btn");
 const sidebarShowBtn = document.querySelector(".sidebar__show-btn");
 const headerTitle = document.querySelector(".header__board-title");
-let isOpen = false;
+let isOpen = window.innerWidth > 768;
 
 themeToggle?.addEventListener("change", () => {
     document.body.classList.toggle("dark-theme");
