@@ -1,11 +1,21 @@
 .header {
     height: 96px;
     padding: 0 32px;
-    background: var(--clr-bg-secondary);
+    background: var(--clr-white);
     border-bottom: 1px solid var(--clr-grey-200);
-
     display: flex;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .header {
+        height: 64px;
+        z-index: 4;
+    }
 }
 
 .header__actions {
@@ -24,9 +34,38 @@
 
 .header__logo {
     flex-shrink: 0;
-    width: 268px;
+    width: 173px;
     height: 100%;
     align-content: center;
-    margin-inline-end: 32px;
+    margin-inline-end: 20px;
     border-inline-end: 1px solid var(--clr-grey-200);
+}
+
+@media (max-width: 768px) {
+    .header__logo {
+        width: fit-content;
+        border-inline-end: none;
+    }
+
+    .header__board-title {
+        font-size: 18px;
+    }
+}
+
+.main h1 {
+    transition: transform 0.5s ease-in-out;
+}
+
+aside:not(.hide-sidebar) + .main h1 {
+    transform: translateX(100px);
+}
+
+@media (max-width: 768px) {
+    .main h1 {
+        transition: none;
+    }
+
+    aside:not(.hide-sidebar) + .main h1 {
+        transform: translateX(0);
+    }
 }

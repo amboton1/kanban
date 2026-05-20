@@ -27,58 +27,69 @@
     </head>
     <body>
         <div class="app">
-            <aside class="sidebar">
-                <div class="sidebar__top">
-                    <div class="sidebar__logo">
-                        <img src="assets/logo.svg" alt="Kanban Logo" />
+            <aside class="sidebar show-sidebar">
+                <div class="sidebar-wrapper">
+                    <div class="sidebar__top">
+                        <div class="sidebar__logo">
+                            <img src="assets/logo.svg" alt="Kanban Logo" />
+                        </div>
+
+                        <div class="sidebar__boards-title h-s">
+                            ALL BOARDS (3)
+                        </div>
+
+                        <ul class="sidebar__boards">
+                            <li class="sidebar__board-item h-m active">
+                                <img src="assets/icon-board.svg" alt="" />
+                                <span>Platform Launch</span>
+                            </li>
+
+                            <li class="sidebar__board-item h-m">
+                                <img src="assets/icon-board.svg" alt="" />
+                                <span>Marketing Plan</span>
+                            </li>
+
+                            <li class="sidebar__board-item h-m">
+                                <img src="assets/icon-board.svg" alt="" />
+                                <span>Roadmap</span>
+                            </li>
+
+                            <li class="sidebar__board-item create">
+                                <img src="assets/icon-board.svg" alt="" />
+                                <span class="h-m">+ Create New Board</span>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="sidebar__bottom">
+                        <div class="sidebar__theme">
+                            <img src="assets/icon-light-theme.svg" alt="" />
+                            <label class="switch">
+                                <input type="checkbox" id="theme-toggle" />
+                                <span class="slider"></span>
+                            </label>
+                            <img src="assets/icon-dark-theme.svg" alt="" />
+                        </div>
 
-                    <div class="sidebar__boards-title h-s">ALL BOARDS (3)</div>
-
-                    <ul class="sidebar__boards">
-                        <li class="sidebar__board-item h-m active">
-                            <img src="assets/icon-board.svg" alt="" />
-                            <span>Platform Launch</span>
-                        </li>
-
-                        <li class="sidebar__board-item h-m">
-                            <img src="assets/icon-board.svg" alt="" />
-                            <span>Marketing Plan</span>
-                        </li>
-
-                        <li class="sidebar__board-item h-m">
-                            <img src="assets/icon-board.svg" alt="" />
-                            <span>Roadmap</span>
-                        </li>
-
-                        <li class="sidebar__board-item create">
-                            <img src="assets/icon-board.svg" alt="" />
-                            <span class="h-m">+ Create New Board</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="sidebar__bottom">
-                    <div class="sidebar__theme">
-                        <img src="assets/icon-light-theme.svg" alt="" />
-                        <label class="switch">
-                            <input type="checkbox" id="theme-toggle" />
-                            <span class="slider"></span>
-                        </label>
-                        <img src="assets/icon-dark-theme.svg" alt="" />
+                        <button
+                            class="sidebar__hide-btn handle-sidebar-btn h-m"
+                        >
+                            <img src="assets/icon-hide-sidebar.svg" alt="" />
+                            Hide Sidebar
+                        </button>
                     </div>
-
-                    <button class="sidebar__hide-btn handle-sidebar-btn h-m">
-                        <img src="assets/icon-hide-sidebar.svg" alt="" />
-                        Hide Sidebar
-                    </button>
                 </div>
             </aside>
 
             <div class="main">
                 <header class="header">
                     <div class="header__logo">
-                        <img src="assets/logo.svg" alt="Kanban Logo" />
+                        <picture>
+                            <source
+                                media="(max-width: 768px)"
+                                srcset="assets/logo-mobile.svg"
+                            />
+                            <img src="assets/logo.svg" alt="Kanban Logo" />
+                        </picture>
                     </div>
                     <h1 class="header__board-title h-xl">Platform Launch</h1>
 
@@ -220,6 +231,7 @@
         </div>
         <script type="module" src="./components/Sidebar/Sidebar.js"></script>
         <script type="module" src="./components/BoardState.js"></script>
+        <script type="module" src="./components/Header.js"></script>
         <script type="module" src="./components/Modal/AddTaskModal.js"></script>
     </body>
 </html>

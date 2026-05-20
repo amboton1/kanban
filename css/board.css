@@ -3,9 +3,21 @@
     grid-template-columns: repeat(4, 280px);
     column-gap: 24px;
     padding: 24px;
+    background-color: var(--clr-grey-100);
     position: relative;
     left: 300px;
     transition: left 0.5s ease-in-out;
+}
+
+.board__board-wrapper {
+    margin-block-start: 96px;
+}
+
+@media (max-width: 768px) {
+    .board__board-wrapper {
+        left: 0;
+        margin-block-start: 64px;
+    }
 }
 
 .move-board-wrapper {
@@ -58,4 +70,17 @@
     border: none;
     font-size: 24px;
     font-weight: 700;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.span-color {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 100vw;
 }

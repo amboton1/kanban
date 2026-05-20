@@ -1,4 +1,5 @@
 import { fetchData } from "../utils/fetchData.js";
+const colorsArray = ["#49C4E5", "#8471F2", "#67E2AE"];
 
 const board = document.querySelector(".board");
 
@@ -6,11 +7,16 @@ export function populateData(boardColumns) {
     board.innerHTML = "";
     const boardWrapper = document.createElement("div");
     boardWrapper.classList.add("board__board-wrapper");
-    boardColumns.forEach((column) => {
+    boardColumns.forEach((column, index) => {
         const boardColumn = document.createElement("div");
         boardColumn.classList.add("board__board-wrapper__board-column");
         const h2 = document.createElement("h2");
+        const colorSpan = document.createElement("span");
+        colorSpan.classList.add("span-color");
+        colorSpan.style.backgroundColor =
+            colorsArray[index % colorsArray.length];
         h2.innerText = column.name + " (" + column.tasks.length + ")";
+        h2.prepend(colorSpan);
         boardColumn.append(h2);
         column.tasks.forEach((task) => {
             const columnTask = document.createElement("div");
